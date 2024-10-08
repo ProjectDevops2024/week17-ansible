@@ -1,0 +1,44 @@
+2024-10-06 20:07:18,657 p=7444 u=ec2-user n=ansible | 172.31.17.188 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-06 20:07:18,702 p=7444 u=ec2-user n=ansible | 172.31.28.222 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-06 20:08:13,173 p=7580 u=ec2-user n=ansible | PLAY [all] *************************************************************************************************************
+2024-10-06 20:08:13,183 p=7580 u=ec2-user n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2024-10-06 20:08:14,704 p=7580 u=ec2-user n=ansible | ok: [172.31.28.222]
+2024-10-06 20:08:15,077 p=7580 u=ec2-user n=ansible | ok: [172.31.17.188]
+2024-10-06 20:08:15,118 p=7580 u=ec2-user n=ansible | TASK [Create a file] ***************************************************************************************************
+2024-10-06 20:08:15,727 p=7580 u=ec2-user n=ansible | changed: [172.31.28.222]
+2024-10-06 20:08:15,874 p=7580 u=ec2-user n=ansible | changed: [172.31.17.188]
+2024-10-06 20:08:15,881 p=7580 u=ec2-user n=ansible | TASK [check something] *************************************************************************************************
+2024-10-06 20:08:16,407 p=7580 u=ec2-user n=ansible | fatal: [172.31.28.222]: FAILED! => {"changed": false, "cmd": "jakdfhdfd", "msg": "[Errno 2] No such file or directory: b'jakdfhdfd': b'jakdfhdfd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 20:08:16,407 p=7580 u=ec2-user n=ansible | ...ignoring
+2024-10-06 20:08:16,523 p=7580 u=ec2-user n=ansible | fatal: [172.31.17.188]: FAILED! => {"changed": false, "cmd": "jakdfhdfd", "msg": "[Errno 2] No such file or directory: b'jakdfhdfd': b'jakdfhdfd'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2024-10-06 20:08:16,523 p=7580 u=ec2-user n=ansible | ...ignoring
+2024-10-06 20:08:16,534 p=7580 u=ec2-user n=ansible | TASK [Create a directory] **********************************************************************************************
+2024-10-06 20:08:16,911 p=7580 u=ec2-user n=ansible | ok: [172.31.28.222]
+2024-10-06 20:08:17,006 p=7580 u=ec2-user n=ansible | ok: [172.31.17.188]
+2024-10-06 20:08:17,031 p=7580 u=ec2-user n=ansible | TASK [Create group] ****************************************************************************************************
+2024-10-06 20:08:17,519 p=7580 u=ec2-user n=ansible | ok: [172.31.28.222]
+2024-10-06 20:08:17,629 p=7580 u=ec2-user n=ansible | ok: [172.31.17.188]
+2024-10-06 20:08:17,637 p=7580 u=ec2-user n=ansible | TASK [Create user Serge] ***********************************************************************************************
+2024-10-06 20:08:17,658 p=7580 u=ec2-user n=ansible | skipping: [172.31.17.188]
+2024-10-06 20:08:18,269 p=7580 u=ec2-user n=ansible | ok: [172.31.28.222]
+2024-10-06 20:08:18,276 p=7580 u=ec2-user n=ansible | TASK [Check uptime] ****************************************************************************************************
+2024-10-06 20:08:18,625 p=7580 u=ec2-user n=ansible | changed: [172.31.28.222]
+2024-10-06 20:08:18,764 p=7580 u=ec2-user n=ansible | changed: [172.31.17.188]
+2024-10-06 20:08:18,771 p=7580 u=ec2-user n=ansible | TASK [Check the date] **************************************************************************************************
+2024-10-06 20:08:19,122 p=7580 u=ec2-user n=ansible | changed: [172.31.28.222]
+2024-10-06 20:08:19,183 p=7580 u=ec2-user n=ansible | changed: [172.31.17.188]
+2024-10-06 20:08:19,198 p=7580 u=ec2-user n=ansible | PLAY RECAP *************************************************************************************************************
+2024-10-06 20:08:19,198 p=7580 u=ec2-user n=ansible | 172.31.17.188              : ok=7    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=1   
+2024-10-06 20:08:19,198 p=7580 u=ec2-user n=ansible | 172.31.28.222              : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
